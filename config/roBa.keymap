@@ -6,10 +6,11 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
+    tapping-term-ms = <20>;
 };
 
 &lt {
-    tapping-term-ms = <60>;
+    tapping-term-ms = <20>;
 };
 
 &trackball {
@@ -85,7 +86,7 @@
             bindings = <&mo>, <&to_layer_0>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <20>;
         };
 
         lt_to_layer_1: lt_to_layer_1 {
@@ -94,7 +95,7 @@
             bindings = <&mo>, <&to_layer_1>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <20>;
         };
 
         ht_tog: ht_tog {
@@ -104,7 +105,7 @@
 
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <300>;
+            tapping-term-ms = <20>;
         };
     };
 
