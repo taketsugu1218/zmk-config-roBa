@@ -161,8 +161,8 @@
         VOICE {
             bindings = <
 &kp ESC         &kp LG(W)     &kp UP      &kp LG(T)        &trans                                   &trans          &trans  &trans  &trans  &trans
-&kp LG(A)       &kp LEFT      &kp DOWN    &kp RIGHT         &kp LG(S)  &typeless      &trans          &trans  &trans  &trans  &trans  &kp SLASH
-&kp LEFT_SHIFT  &kp LG(Z)     &kp LG(C)   &kp LG(V)          &ht_tog 7 B &trans        &trans          &trans  &trans  &trans  &trans  &trans
+&kp LG(A)       &kp LEFT      &kp DOWN    &kp RIGHT         &kp LG(S)  &trans         &trans          &trans  &trans  &trans  &trans  &kp SLASH
+&kp LEFT_SHIFT  &kp LG(Z)     &kp LG(C)   &kp LG(V)          &ht_tog 7 B &typeless     &trans          &trans  &trans  &trans  &trans  &trans
 &kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT &trans            &kp SPACE  &trans         &kp BACKSPACE   &kp ENTER                      &kp DEL
             >;
         };
