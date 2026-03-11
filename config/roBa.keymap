@@ -8,6 +8,10 @@
     quick-tap-ms = <0>;
 };
 
+&lt {
+    tapping-term-ms = <150>;
+};
+
 &trackball {
     automouse-layer = <5>;
     scroll-layers = <3 6 8 9>;
