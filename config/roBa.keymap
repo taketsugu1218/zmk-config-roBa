@@ -9,11 +9,11 @@
 };
 
 &trackball {
-    automouse-layer = <4>;
-    scroll-layers = <2 5>;
+    automouse-layer = <5>;
+    scroll-layers = <3 6>;
 
     // arrows {
-    //     layers = <3>;
+    //     layers = <4>;
     //     bindings =
     //         <&kp RIGHT_ARROW>,
     //         <&kp LEFT_ARROW>,
@@ -58,6 +58,13 @@
             label = "TO_LAYER_0";
         };
 
+        to_layer_1: to_layer_1 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &tog 1 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_LAYER_1";
+        };
+
         typeless: typeless {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -72,6 +79,15 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        lt_to_layer_1: lt_to_layer_1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TO_1";
+            bindings = <&mo>, <&to_layer_1>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -93,10 +109,21 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 6 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &ht_tog 7 V                   &kp B        &typeless                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&mt LEFT_SHIFT Z  &kp X         &kp C         &ht_tog 8 V                  &kp B        &typeless                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 7 INT_HENKAN  &lt 3 SPACE  &lt_to_layer_0 4 INT_MUHENKAN      &kp BACKSPACE  &lt 2 ENTER                             &kp DEL
+            >;
+
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+        };
+
+        WINDOWS {
+            bindings = <
+&trans            &trans        &trans        &trans                          &trans                                                              &trans         &trans  &trans     &trans   &trans
+&trans            &trans        &trans        &trans                          &trans       &kp LS(LC(S))                          &trans           &trans         &trans  &trans     &trans   &trans
+&trans            &trans        &trans        &ht_tog 9 V                    &trans       &trans                                 &trans           &trans         &trans  &trans     &trans   &trans
+&kp LEFT_WIN      &kp LCTRL     &trans        &lt_to_layer_1 7 INT_HENKAN   &trans       &lt_to_layer_1 4 INT_MUHENKAN          &trans           &trans                                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -149,21 +176,30 @@
             >;
         };
 
-        layer_6 {
+        layer_7 {
             bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&tog 1  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
         };
 
-        VOICE {
+        VOICE_MAC {
             bindings = <
 &kp ESC         &kp LG(W)     &kp UP      &kp LG(T)        &trans                                   &trans          &trans  &trans  &trans  &trans
 &kp LG(A)       &kp LEFT      &kp DOWN    &kp RIGHT         &kp LG(S)  &trans         &trans          &trans  &trans  &trans  &trans  &kp SLASH
-&kp LEFT_SHIFT  &kp LG(Z)     &kp LG(C)   &kp LG(V)          &ht_tog 7 B &typeless     &trans          &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LG(Z)     &kp LG(C)   &kp LG(V)         &ht_tog 8 B &typeless    &trans          &trans  &trans  &trans  &trans  &trans
 &kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT &trans            &kp SPACE  &trans         &kp BACKSPACE   &kp ENTER                      &kp DEL
+            >;
+        };
+
+        VOICE_WIN {
+            bindings = <
+&kp ESC         &kp LC(W)     &kp UP      &kp LC(T)        &trans                                   &trans          &trans  &trans  &trans  &trans
+&kp LC(A)       &kp LEFT      &kp DOWN    &kp RIGHT         &kp LC(S)  &trans         &trans          &trans  &trans  &trans  &trans  &kp SLASH
+&kp LEFT_SHIFT  &kp LC(Z)     &kp LC(C)   &kp LC(V)         &ht_tog 9 B &typeless    &trans          &trans  &trans  &trans  &trans  &trans
+&kp LEFT_WIN    &kp LCTRL     &kp LEFT_ALT &trans            &kp SPACE  &trans         &kp BACKSPACE   &kp ENTER                      &kp DEL
             >;
         };
     };
