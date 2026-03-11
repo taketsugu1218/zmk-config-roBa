@@ -57,6 +57,14 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        typeless: typeless {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp GLOBE &kp RIGHT_GUI>
+                     , <&macro_release &kp RIGHT_GUI &kp GLOBE>;
+            label = "TYPELESS";
+        };
     };
 
     behaviors {
@@ -64,6 +72,15 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        ht_to: ht_to {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_TO";
+            bindings = <&to>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -77,7 +94,7 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&mt LEFT_SHIFT Z  &kp X         &kp C         &ht_to 7 V                   &kp B        &typeless                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
@@ -137,6 +154,15 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+            >;
+        };
+
+        VOICE {
+            bindings = <
+&kp ESC         &kp LG(W)     &kp UP      &kp LG(T)        &trans                                   &trans          &trans  &trans  &trans  &trans
+&kp LG(A)       &kp LEFT      &kp DOWN    &kp RIGHT         &kp LG(S)  &typeless      &trans          &trans  &trans  &trans  &trans  &kp SLASH
+&kp LEFT_SHIFT  &kp LG(Z)     &kp LG(C)   &ht_to 0 LG(V)   &trans     &trans         &trans          &trans  &trans  &trans  &trans  &trans
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT &trans            &kp SPACE  &trans         &kp BACKSPACE   &kp ENTER                      &kp DEL
             >;
         };
     };
