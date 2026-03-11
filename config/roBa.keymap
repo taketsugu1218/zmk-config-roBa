@@ -10,7 +10,7 @@
 
 &trackball {
     automouse-layer = <4>;
-    scroll-layers = <1 5>;
+    scroll-layers = <2 5>;
 
     // arrows {
     //     layers = <3>;
@@ -77,10 +77,10 @@
             tapping-term-ms = <200>;
         };
 
-        ht_to: ht_to {
+        ht_tog: ht_tog {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_TO";
-            bindings = <&to>, <&kp>;
+            label = "HOLD_TAP_TOG";
+            bindings = <&tog>, <&kp>;
 
             #binding-cells = <2>;
             flavor = "hold-preferred";
@@ -95,7 +95,7 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &ht_to 7 V                   &kp B        &typeless                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&mt LEFT_SHIFT Z  &kp X         &kp C         &ht_tog 7 V                   &kp B        &typeless                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
@@ -162,7 +162,7 @@
             bindings = <
 &kp ESC         &kp LG(W)     &kp UP      &kp LG(T)        &trans                                   &trans          &trans  &trans  &trans  &trans
 &kp LG(A)       &kp LEFT      &kp DOWN    &kp RIGHT         &kp LG(S)  &typeless      &trans          &trans  &trans  &trans  &trans  &kp SLASH
-&kp LEFT_SHIFT  &kp LG(Z)     &kp LG(C)   &ht_to 0 LG(V)   &trans     &trans         &trans          &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LG(Z)     &kp LG(C)   &ht_tog 7 LG(V)   &trans     &trans         &trans          &trans  &trans  &trans  &trans  &trans
 &kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT &trans            &kp SPACE  &trans         &kp BACKSPACE   &kp ENTER                      &kp DEL
             >;
         };
