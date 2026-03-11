@@ -212,9 +212,9 @@
         RIGHT_HAND_ONLY {
             bindings = <
 &none  &none  &none  &none  &none                      &kp ESC    &kp LG(Z)     &kp LC(UP)    &kp LG(TAB)    &kp LG(W)
-&none  &none  &none  &none  &none  &none      &typeless  &kp LG(A)  &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &kp LG(S)
-&none  &none  &none  &none  &none  &none      &to 0      &kp SPACE  &kp LG(C)     &kp LG(V)     &mkp MB1       &mkp MB2
-&none  &none  &none  &none  &none  &none      &kp DEL    &kp ENTER                                              &kp BACKSPACE
+&none  &none  &none  &none  &none  &none      &mkp MB1   &typeless  &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &kp LG(S)
+&none  &none  &none  &none  &none  &none      &mkp MB2   &kp ENTER  &kp SPACE     &kp LG(C)     &kp LG(V)      &to 0
+&none  &none  &none  &none  &none  &none      &kp DEL    &kp BACKSPACE                                         &to 0
             >;
         };
     };
