@@ -23,6 +23,7 @@
 | 6 | System | Bluetooth設定 + RHOモード入口 | 変換/Del 長押し |
 | 7 | RHO_MAC | 右手のみモード (Mac) | L6からHポジション |
 | 8 | RHO_WIN | 右手のみモード (Windows) | L6からJポジション |
+| 9 | RHO_SCROLL | RHO中のスクロールモード (MB2長押しで発動) | MB2長押し中のみ |
 
 ---
 
