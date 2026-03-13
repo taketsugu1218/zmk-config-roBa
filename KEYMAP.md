@@ -150,7 +150,7 @@ I長押しで一時的に有効。トラックボールがスクロール動作�
 | 端列 | Col1 | Col2 | Col3 | Col4 | Col5 |
 |------|------|------|------|------|------|
 | | ESC | Cmd+Z | Ctrl+Up | Cmd+Tab | Cmd+W |
-| MB1 | Cmd+A | Ctrl+Left | Ctrl+Down | Ctrl+Right | Cmd+S |
+| MB1 | Ctrl+Shift+X | Ctrl+Left | Ctrl+Down | Ctrl+Right | Cmd+S |
 | MB2 | Enter | Space | Cmd+C | Cmd+V | ->L0 |
 | | BS | Del | | | ->L0 |
 
@@ -167,7 +167,7 @@ Layer 7 と同じ構成だが Cmd->Ctrl、Cmd+Tab->Alt+Tab に変更。
 | 端列 | Col1 | Col2 | Col3 | Col4 | Col5 |
 |------|------|------|------|------|------|
 | | ESC | Ctrl+Z | Ctrl+Up | Alt+Tab | Ctrl+W |
-| MB1 | Ctrl+A | Ctrl+Left | Ctrl+Down | Ctrl+Right | Ctrl+S |
+| MB1 | Ctrl+Shift+X | Ctrl+Left | Ctrl+Down | Ctrl+Right | Ctrl+S |
 | MB2 | Enter | Space | Ctrl+C | Ctrl+V | ->Win |
 | | BS | Del | | | ->Win |
 

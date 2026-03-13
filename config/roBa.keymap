@@ -136,7 +136,7 @@
         RHO_MAC {
             bindings = <
 &none  &none  &none  &none  &none                       &kp ESC    &kp LG(Z)   &kp LC(UP)    &kp LG(TAB)    &kp LG(W)
-&none  &none  &none  &none  &none  &none       &mkp MB1 &kp LG(A)  &kp LC(LEFT) &kp LC(DOWN) &kp LC(RIGHT)  &kp LG(S)
+&none  &none  &none  &none  &none  &none       &mkp MB1 &kp LC(LS(X))  &kp LC(LEFT) &kp LC(DOWN) &kp LC(RIGHT)  &kp LG(S)
 &none  &none  &none  &none  &none  &none       &ht_scroll 5 MB2 &kp RET    &kp SPACE    &kp LG(C)    &kp LG(V)      &to 0
 &none  &none  &none  &none  &none  &none                &kp BSPC   &kp DEL                                  &to 0
             >;
@@ -146,7 +146,7 @@
         RHO_WIN {
             bindings = <
 &none  &none  &none  &none  &none                       &kp ESC    &kp LC(Z)    &kp LC(UP)    &kp LA(TAB)    &kp LC(W)
-&none  &none  &none  &none  &none  &none       &mkp MB1 &kp LC(A)  &kp LC(LEFT) &kp LC(DOWN)  &kp LC(RIGHT)  &kp LC(S)
+&none  &none  &none  &none  &none  &none       &mkp MB1 &kp LC(LS(X))  &kp LC(LEFT) &kp LC(DOWN)  &kp LC(RIGHT)  &kp LC(S)
 &none  &none  &none  &none  &none  &none       &ht_scroll 5 MB2 &kp RET    &kp SPACE    &kp LC(C)     &kp LC(V)      &to_win_base
 &none  &none  &none  &none  &none  &none                &kp BSPC   &kp DEL                                   &to_win_base
             >;
